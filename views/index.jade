@@ -1,0 +1,434 @@
+extends layout
+
+block content
+  h2 Dibner Library Printers 
+  <br />
+  div.btn-group
+    a#BW1btn
+    a#BW2btn
+    a#BW3btn
+    a#COL1btn
+    a#MFP1btn
+    a#MFPF1btn
+    a#MFPSTAFFbtn
+  //BLACK & WHITE 1
+  section#BW1
+  div.row
+    <br />
+    div.span4
+      h3 Black & White Printer 1
+      h5
+        p#BW1pStatus
+      h6
+        p#BW1pMessage
+    div.span7
+      div.tabbable
+        ul.nav.nav-tabs
+          li.active
+            a(href="#BW1supplies", data-toggle="tab") Supplies
+          li
+            a(href="#BW1info", data-toggle="tab") Info
+          li
+            a(href="#BW1counter", data-toggle="tab") Counter
+        div.tab-content
+          div.tab-pane.active#BW1supplies
+            div.row
+              div.span3
+                p#BW1paper
+                p#BW1tr1
+                p#BW1tr2
+                p#BW1tr3
+              div.span4
+                p#BW1toner
+                p#BW1toB
+                p#BW1kits
+                p#BW1kitA
+                p#BW1kitB
+          div.tab-pane#BW1info
+                p#BW1name
+                p#BW1tgioaID
+                p#BW1deviceName
+                p#BW1hostName
+                p#BW1machineID
+                p#BW1ipAddress
+                p#BW1modelName
+          div.tab-pane#BW1counter
+                p#BW1countPrinter
+                p#BW1countPrinterBW
+                p#BW1countOther
+                p#BW1countDuplex
+  //BLACK & WHITE 2
+  section#BW2
+  div.row
+    <br />
+    div.span4
+      h3 Black & White Printer 2
+      h5
+        p#BW2pStatus
+      h6
+        p#BW2pMessage
+    div.span7
+      div.tabbable
+        ul.nav.nav-tabs
+          li.active
+            a(href="#BW2supplies", data-toggle="tab") Supplies
+          li
+            a(href="#BW2info", data-toggle="tab") Info
+          li
+            a(href="#BW2counter", data-toggle="tab") Counter
+        div.tab-content
+          div.tab-pane.active#BW2supplies
+            div.row
+              div.span3
+                p#BW2paper
+                p#BW2tr1
+                p#BW2tr2
+                p#BW2tr3
+              div.span4
+                p#BW2toner
+                p#BW2toB
+                p#BW2kits
+                p#BW2kitA
+                p#BW2kitB
+          div.tab-pane#BW2info
+                p#BW2name
+                p#BW2tgioaID
+                p#BW2deviceName
+                p#BW2hostName
+                p#BW2machineID
+                p#BW2ipAddress
+                p#BW2modelName
+          div.tab-pane#BW2counter
+                p#BW2countPrinter
+                p#BW2countPrinterBW
+                p#BW2countOther
+                p#BW2countDuplex
+  //BLACK & WHITE 3
+  section#BW3
+  div.row
+    <br />
+    div.span4
+      h3 Black & White 3 (MFP)
+      h5
+        div.row
+          div.span
+            p#BW3statCollumn
+          div.span3
+            p#BW3pStatus
+            p#BW3cStatus
+            p#BW3sStatus
+      h6
+        p#BW3pMessage
+    div.span7
+      div.tabbable
+        ul.nav.nav-tabs
+          li.active
+            a(href="#BW3supplies", data-toggle="tab") Supplies
+          li
+            a(href="#BW3info", data-toggle="tab") Info
+          li
+            a(href="#BW3counter", data-toggle="tab") Counter
+        div.tab-content
+          div.tab-pane.active#BW3supplies
+            div.row
+              div.span3
+                p#BW3paper
+                p#BW3tr1
+                p#BW3tr2
+                p#BW3tr3
+                p#BW3tr4
+              div.span4
+                p#BW3toner
+                p#BW3toB
+          div.tab-pane#BW3info
+                p#BW3name
+                p#BW3tgioaID
+                p#BW3deviceName
+                p#BW3hostName
+                p#BW3machineID
+                p#BW3ipAddress
+                p#BW3modelName
+          div.tab-pane#BW3counter
+            div.row
+              div.span3
+                p#BW3countPrinter
+                p#BW3countPrinterBW
+              div.span3
+                p#BW3countCopier
+                p#BW3countCopierBW
+            div.row
+              div.span3
+                p#BW3countScanner
+                p#BW3countScannerBW
+                p#BW3countScannerCOL
+              div.span3
+                p#BW3countOther
+                p#BW3countDuplex
+  //COLOR PRINTER
+  section#COL1
+  div.row
+    <br />
+    div.span4
+      h3 Color Printer
+      h5
+        p#COL1pStatus
+      h6
+        p#COL1pMessage
+    div.span7
+      div.tabbable
+        ul.nav.nav-tabs
+          li.active
+            a(href="#COL1supplies", data-toggle="tab") Supplies
+          li
+            a(href="#COL1info", data-toggle="tab") Info
+          li
+            a(href="#COL1counter", data-toggle="tab") Counter
+        div.tab-content
+          div.tab-pane.active#COL1supplies
+            div.row
+              div.span3
+                p#COL1paper
+                p#COL1tr1
+                p#COL1tr2
+                p#COL1tr3
+              div.span4
+                p#COL1toner
+                p#COL1toB
+                p#COL1toC
+                p#COL1toM
+                p#COL1toY
+            div.row
+              div.span3
+                p#COL1photoUnit
+                p#COL1photoUnitB
+                p#COL1photoUnitCOL
+              div.span4
+                p#COL1otherSupps
+                p#COL1fusingUnit
+                p#COL1transferUnit
+                p#COL1wasteBottle
+          div.tab-pane#COL1info
+                p#COL1name
+                p#COL1tgioaID
+                p#COL1deviceName
+                p#COL1hostName
+                p#COL1machineID
+                p#COL1ipAddress
+                p#COL1modelName
+          div.tab-pane#COL1counter
+            div.row
+              div.span3
+                p#COL1countPrinter
+                p#COL1countPrinterBW
+                p#COL1countPrinterSC
+                p#COL1countPrinterFC
+                p#COL1countPrinterTC
+              div.span3
+                p#COL1countOther
+                p#COL1countDuplex
+  //MULTI-FUNK PRINTER
+  section#MFP1
+  div.row
+    <br />
+    div.span4
+      h3 Multi-Functional Printer
+      h5
+        div.row
+          div.span
+            p#MFP1statCollumn
+          div.span3
+            p#MFP1pStatus
+            p#MFP1cStatus
+            p#MFP1sStatus
+      h6
+        p#MFP1pMessage
+        p#MFP1sMessage
+    div.span7
+      div.tabbable
+        ul.nav.nav-tabs
+          li.active
+            a(href="#MFP1supplies", data-toggle="tab") Supplies
+          li
+            a(href="#MFP1info", data-toggle="tab") Info
+          li
+            a(href="#MFP1counter", data-toggle="tab") Counter
+        div.tab-content
+          div.tab-pane.active#MFP1supplies
+            div.row
+              div.span3
+                p#MFP1paper
+                p#MFP1tr1
+                p#MFP1tr2
+                p#MFP1tr3
+                p#MFP1tr4
+              div.span4
+                p#MFP1toner
+                p#MFP1toB
+          div.tab-pane#MFP1info
+                p#MFP1name
+                p#MFP1tgioaID
+                p#MFP1deviceName
+                p#MFP1hostName
+                p#MFP1machineID
+                p#MFP1ipAddress
+                p#MFP1modelName
+          div.tab-pane#MFP1counter
+            div.row
+              div.span3
+                p#MFP1countPrinter
+                p#MFP1countPrinterBW
+              div.span3
+                p#MFP1countCopier
+                p#MFP1countCopierBW
+            div.row
+              div.span3
+                p#MFP1countScanner
+                p#MFP1countScannerBW
+                p#MFP1countScannerCOL
+              div.span3
+                p#MFP1countOther
+                p#MFP1countDuplex
+  //MFP with FAX
+  section#MFPF1
+  div.row
+    <br />
+    div.span4
+      h3 MFP with Fax
+      h5
+        div.row
+          div.span
+            p#MFPF1statCollumn
+          div.span3
+            p#MFPF1pStatus
+            p#MFPF1cStatus
+            p#MFPF1sStatus
+            p#MFPF1fStatus
+      h6
+        p#MFPF1pMessage
+        p#MFPF1sMessage
+    div.span7
+      div.tabbable
+        ul.nav.nav-tabs
+          li.active
+            a(href="#MFPF1supplies", data-toggle="tab") Supplies
+          li
+            a(href="#MFPF1info", data-toggle="tab") Info
+          li
+            a(href="#MFPF1counter", data-toggle="tab") Counter
+        div.tab-content
+          div.tab-pane.active#MFPF1supplies
+            div.row
+              div.span3
+                p#MFPF1paper
+                p#MFPF1tr1
+                p#MFPF1tr2
+              div.span4
+                p#MFPF1toner
+                p#MFPF1toB
+          div.tab-pane#MFPF1info
+                p#MFPF1name
+                p#MFPF1tgioaID
+                p#MFPF1deviceName
+                p#MFPF1hostName
+                p#MFPF1machineID
+                p#MFPF1ipAddress
+                p#MFPF1modelName
+          div.tab-pane#MFPF1counter
+            div.row
+              div.span3
+                p#MFPF1countPrinter
+                p#MFPF1countPrinterBW
+              div.span3
+                p#MFPF1countCopier
+                p#MFPF1countCopierBW
+            div.row
+              div.span3
+                p#MFPF1countScanner
+                p#MFPF1countScannerBW
+                p#MFPF1countScannerCOL
+              div.span3
+                p#MFPF1countFax
+                p#MFPF1countFaxBW
+                p#MFPF1countOther
+                p#MFPF1countDuplex
+  //STAFF PRINTER
+  section#MFPSTAFF
+  div.row
+    <br />
+    div.span4
+      h3 Staff Printer
+      h5
+        div.row
+          div.span
+            p#MFPSTAFFstatCollumn
+          div.span3
+            p#MFPSTAFFpStatus
+            p#MFPSTAFFcStatus
+            p#MFPSTAFFsStatus
+            p#MFPSTAFFfStatus
+      h6
+        p#MFPSTAFFpMessage
+        p#MFPSTAFFsMessage
+    div.span7
+      div.tabbable
+        ul.nav.nav-tabs
+          li.active
+            a(href="#MFPSTAFFsupplies", data-toggle="tab") Supplies
+          li
+            a(href="#MFPSTAFFinfo", data-toggle="tab") Info
+          li
+            a(href="#MFPSTAFFcounter", data-toggle="tab") Counter
+        div.tab-content
+          div.tab-pane.active#MFPSTAFFsupplies
+            div.row
+              div.span3
+                p#MFPSTAFFpaper
+                p#MFPSTAFFtr1
+                p#MFPSTAFFtr2
+                p#MFPSTAFFtr3
+                p#MFPSTAFFtr4
+              div.span4
+                p#MFPSTAFFtoner
+                p#MFPSTAFFtoB
+                p#MFPSTAFFtoC
+                p#MFPSTAFFtoM
+                p#MFPSTAFFtoY
+          div.tab-pane#MFPSTAFFinfo
+                p#MFPSTAFFname
+                p#MFPSTAFFtgioaID
+                p#MFPSTAFFdeviceName
+                p#MFPSTAFFhostName
+                p#MFPSTAFFmachineID
+                p#MFPSTAFFipAddress
+                p#MFPSTAFFmodelName
+          div.tab-pane#MFPSTAFFcounter
+            div.row
+              div.span2
+                p#MFPSTAFFcountPrinter
+                p#MFPSTAFFcountPrinterBW
+                p#MFPSTAFFcountPrinterSC
+                p#MFPSTAFFcountPrinterFC
+                p#MFPSTAFFcountPrinterTC
+              div.span2
+                p#MFPSTAFFcountCopier
+                p#MFPSTAFFcountCopierBW
+                p#MFPSTAFFcountCopierSC
+                p#MFPSTAFFcountCopierFC
+                p#MFPSTAFFcountCopierTC
+              div.span2
+                p#MFPSTAFFcountScanner
+                p#MFPSTAFFcountScannerBW
+                p#MFPSTAFFcountScannerCOL
+                p#MFPSTAFFcountSendTotal
+                p#MFPSTAFFcountSendTotalBW
+                p#MFPSTAFFcountSendTotalCOL
+            div.row
+              div.span2
+                p#MFPSTAFFcountFax
+                p#MFPSTAFFcountFaxBW
+              div.span2
+                p#MFPSTAFFcountFaxTrans
+                p#MFPSTAFFcountFaxTransT
+              div.span2
+                p#MFPSTAFFcountOther
+                p#MFPSTAFFcountDuplex

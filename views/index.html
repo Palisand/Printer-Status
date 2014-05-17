@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DibLib Machines</title>
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="/stylesheets/style.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="javascripts/socketData.js"></script>
+</head>
+<body>
+<h2>Dibner Library Printers</h2><br />
+<div class="btn-group">
+<a id="BW1btn"></a>
+<a id="BW2btn"></a>
+<a id="BW3btn"></a>
+<a id="COL1btn"></a>
+<a id="MFP1btn"></a>
+<a id="MFPF1btn"></a>
+<a id="MFPSTAFFbtn"></a>
+</div>
+
+<section id="BW1">
+<div class="row"><br />
+<div class="span4">
+<h3>Black & White Printer 1</h3>
+<h5><p id="BW1pStatus"></p></h5>
+<h6><p id="BW1pMessage"></p></h6>
+</div>
+<div class="span7">
+<div class="tabbable">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#BW1supplies", data-toggle="tab">Supplies</a></li>
+<li><a href="#BW1info", data-toggle="tab">Info</a></li>
+<li><a href="#BW1counter", data-toggle="tab">Counter</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="BW1supplies">
+<div class="row">
+<div class="span3">
+<p id="BW1paper"></p>
+<p id="BW1tr1"></p>
+<p id="BW1tr2"></p>
+<p id="BW1tr3"></p>
+</div> 
+<div class="span4">
+<p id="BW1toner"></p>
+<p id="BW1toB"></p>
+<p id="BW1kits"></p>
+<p id="BW1kitA"></p>
+<p id="BW1kitB"></p>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="BW1info">
+<p id="BW1name"></p>
+<p id="BW1tgioaID"></p>
+<p id="BW1deviceName"></p>
+<p id="BW1hostName"></p>
+<p id="BW1machineID"></p>
+<p id="BW1ipAddress"></p>
+<p id="BW1modelName"></p>
+</div>
+<div class="tab-pane" id="BW1counter">
+<p id="BW1countPrinter"></p>
+<p id="BW1countPrinterBW"></p>
+<p id="BW1countOther"></p>
+<p id="BW1countDuplex"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="BW2">
+<div class="row"><br />
+<div class="span4">
+<h3>Black & White Printer 2</h3>
+<h5><p id="BW2pStatus"></p></h5>
+<h6><p id="BW2pMessage"></p></h6>
+</div>
+<div class="span7">
+<div class="tabbable">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#BW2supplies", data-toggle="tab">Supplies</a></li>
+<li><a href="#BW2info", data-toggle="tab">Info</a></li>
+<li><a href="#BW2counter", data-toggle="tab">Counter</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="BW2supplies">
+<div class="row">
+<div class="span3">
+<p id="BW2paper"></p>
+<p id="BW2tr1"></p>
+<p id="BW2tr2"></p>
+<p id="BW2tr3"></p>
+</div> 
+<div class="span4">
+<p id="BW2toner"></p>
+<p id="BW2toB"></p>
+<p id="BW2kits"></p>
+<p id="BW2kitA"></p>
+<p id="BW2kitB"></p>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="BW2info">
+<p id="BW2name"></p>
+<p id="BW2tgioaID"></p>
+<p id="BW2deviceName"></p>
+<p id="BW2hostName"></p>
+<p id="BW2machineID"></p>
+<p id="BW2ipAddress"></p>
+<p id="BW2modelName"></p>
+</div>
+<div class="tab-pane" id="BW2counter">
+<p id="BW2countPrinter"></p>
+<p id="BW2countPrinterBW"></p>
+<p id="BW2countOther"></p>
+<p id="BW2countDuplex"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="BW3">
+<div class="row"><br />
+<div class="span4">
+<h3>Black & White 3 (MFP)</h3>
+<h5>
+<div class="row">
+<div class="span">
+<p id="BW3statCollumn"></p>
+</div>
+<div class="span3">
+<p id="BW3pStatus"></p>
+<p id="BW3cStatus"></p>
+<p id="BW3sStatus"></p>
+</div>
+</div>
+</h5>
+<h6><p id="BW3pMessage"></p></h6>
+</div>
+<div class="span7">
+<div class="tabbable">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#BW3supplies", data-toggle="tab">Supplies</a></li>
+<li><a href="#BW3info", data-toggle="tab">Info</a></li>
+<li><a href="#BW3counter", data-toggle="tab">Counter</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="BW3supplies">
+<div class="row">
+<div class="span3">
+<p id="BW3paper"></p>
+<p id="BW3tr1"></p>
+<p id="BW3tr2"></p>
+<p id="BW3tr3"></p>
+<p id="BW3tr4"></p>
+</div> 
+<div class="span4">
+<p id="BW3toner"></p>
+<p id="BW3toB"></p>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="BW3info">
+<p id="BW3name"></p>
+<p id="BW3tgioaID"></p>
+<p id="BW3deviceName"></p>
+<p id="BW3hostName"></p>
+<p id="BW3machineID"></p>
+<p id="BW3ipAddress"></p>
+<p id="BW3modelName"></p>
+</div>
+<div class="tab-pane" id="BW3counter">
+<div class="row">
+<div class="span3">
+<p id="BW3countPrinter"></p>
+<p id="BW3countPrinterBW"></p>
+</div>
+<div class="span3">
+<p id="BW3countCopier"></p>
+<p id="BW3countCopierBW"></p>
+</div>
+</div>
+<div class="row">
+<div class="span3">
+<p id="BW3countScanner"></p>
+<p id="BW3countScannerBW"></p>
+<p id="BW3countScannerCOL"></p>
+</div>
+<div class="span3">
+<p id="BW3countOther"></p>
+<p id="BW3countDuplex"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="COL1">
+<div class="row"><br />
+<div class="span4">
+<h3>Color Printer</h3>
+<h5><p id="COL1pStatus"></p></h5>
+<h6><p id="COL1pMessage"></p></h6>
+</div>
+<div class="span7">
+<div class="tabbable">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#COL1supplies", data-toggle="tab">Supplies</a></li>
+<li><a href="#COL1info", data-toggle="tab">Info</a></li>
+<li><a href="#COL1counter", data-toggle="tab">Counter</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="COL1supplies">
+<div class="row">
+<div class="span3">
+<p id="COL1paper"></p>
+<p id="COL1tr1"></p>
+<p id="COL1tr2"></p>
+<p id="COL1tr3"></p>
+</div> 
+<div class="span4">
+<p id="COL1toner"></p>
+<p id="COL1toB"></p>
+<p id="COL1toC"></p>
+<p id="COL1toM"></p>
+<p id="COL1toY"></p>
+</div>
+</div>
+<div class="row">
+<div class="span3">
+<p id="COL1photoUnit"></p>
+<p id="COL1photoUnitB"></p>
+<p id="COL1photoUnitCOL"></p>
+</div>
+<div class="span4">
+<p id="COL1otherSupps"></p>
+<p id="COL1fusingUnit"></p>
+<p id="COL1transferUnit"></p>
+<p id="wasteBottle"></p>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="COL1info">
+<p id="COL1name"></p>
+<p id="COL1tgioaID"></p>
+<p id="COL1deviceName"></p>
+<p id="COL1hostName"></p>
+<p id="COL1machineID"></p>
+<p id="COL1ipAddress"></p>
+<p id="COL1modelName"></p>
+</div>
+<div class="tab-pane" id="COL1counter">
+<div class="row">
+<div class="span3">
+<p id="COL1countPrinter"></p>
+<p id="COL1countPrinterBW"></p>
+<p id="COL1countPrinterSC"></p>
+<p id="COL1countPrinterFC"></p>
+<p id="COL1countPrinterTC"></p>
+</div>
+<div class="span3">
+<p id="COL1countOther"></p>
+<p id="COL1countDuplex"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="MFP1">
+<div class="row"><br />
+<div class="span4">
+<h3>Multi-Functional Printer</h3>
+<h5>
+<div class="row">
+<div class="span">
+<p id="MFP1statCollumn"></p>
+</div>
+<div class="span3">
+<p id="MFP1pStatus"></p>
+<p id="MFP1cStatus"></p>
+<p id="MFP1sStatus"></p>
+</div>
+</div>
+</h5>
+<h6>
+<p id="MFP1pMessage"></p>
+<p id="MFP1sMessage"></p>
+</h6>
+</div>
+<div class="span7">
+<div class="tabbable">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#MFP1supplies", data-toggle="tab">Supplies</a></li>
+<li><a href="#MFP1info", data-toggle="tab">Info</a></li>
+<li><a href="#MFP1counter", data-toggle="tab">Counter</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="MFP1supplies">
+<div class="row">
+<div class="span3">
+<p id="MFP1paper"></p>
+<p id="MFP1tr1"></p>
+<p id="MFP1tr2"></p>
+<p id="MFP1tr3"></p>
+<p id="MFP1tr4"></p>
+</div> 
+<div class="span4">
+<p id="MFP1toner"></p>
+<p id="MFP1toB"></p>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="MFP1info">
+<p id="MFP1name"></p>
+<p id="MFP1tgioaID"></p>
+<p id="MFP1deviceName"></p>
+<p id="MFP1hostName"></p>
+<p id="MFP1machineID"></p>
+<p id="MFP1ipAddress"></p>
+<p id="MFP1modelName"></p>
+</div>
+<div class="tab-pane" id="MFP1counter">
+<div class="row">
+<div class="span3">
+<p id="MFP1countPrinter"></p>
+<p id="MFP1countPrinterBW"></p>
+</div>
+<div class="span3">
+<p id="MFP1countCopier"></p>
+<p id="MFP1countCopierBW"></p>
+</div>
+</div>
+<div class="row">
+<div class="span3">
+<p id="MFP1countScanner"></p>
+<p id="MFP1countScannerBW"></p>
+<p id="MFP1countScannerCOL"></p>
+</div>
+<div class="span3">
+<p id="MFP1countOther"></p>
+<p id="MFP1countDuplex"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="MFPF1">
+<div class="row"><br />
+<div class="span4">
+<h3>MFP with Fax</h3>
+<h5>
+<div class="row">
+<div class="span">
+<p id="MFPF1statCollumn"></p>
+</div>
+<div class="span3">
+<p id="MFPF1pStatus"></p>
+<p id="MFPF1cStatus"></p>
+<p id="MFPF1sStatus"></p>
+<p id="MFPF1fStatus"></p>
+</div>
+</div>
+</h5>
+<h6>
+<p id="MFPF1pMessage"></p>
+<p id="MFPF1sMessage"></p>
+</h6>
+</div>
+<div class="span7">
+<div class="tabbable">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#MFPF1supplies", data-toggle="tab">Supplies</a></li>
+<li><a href="#MFPF1info", data-toggle="tab">Info</a></li>
+<li><a href="#MFPF1counter", data-toggle="tab">Counter</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="MFPF1supplies">
+<div class="row">
+<div class="span3">
+<p id="MFPF1paper"></p>
+<p id="MFPF1tr1"></p>
+<p id="MFPF1tr2"></p>
+</div> 
+<div class="span4">
+<p id="MFPF1toner"></p>
+<p id="MFPF1toB"></p>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="MFPF1info">
+<p id="MFPF1name"></p>
+<p id="MFPF1tgioaID"></p>
+<p id="MFPF1deviceName"></p>
+<p id="MFPF1hostName"></p>
+<p id="MFPF1machineID"></p>
+<p id="MFPF1ipAddress"></p>
+<p id="MFPF1modelName"></p>
+</div>
+<div class="tab-pane" id="MFPF1counter">
+<div class="row">
+<div class="span3">
+<p id="MFPF1countPrinter"></p>
+<p id="MFPF1countPrinterBW"></p>
+</div>
+<div class="span3">
+<p id="MFPF1countCopier"></p>
+<p id="MFPF1countCopierBW"></p>
+</div>
+</div>
+<div class="row">
+<div class="span3">
+<p id="MFPF1countScanner"></p>
+<p id="MFPF1countScannerBW"></p>
+<p id="MFPF1countScannerCOL"></p>
+</div>
+<div class="span3">
+<p id="MFPF1countFax"></p>
+<p id="MFPF1countFaxBW"></p>
+<p id="MFPF1countOther"></p>
+<p id="MFPF1countDuplex"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="MFPSTAFF">
+<div class="row"><br />
+<div class="span4">
+<h3>Staff Printer</h3>
+<h5>
+<div class="row">
+<div class="span">
+<p id="MFPSTAFFstatCollumn"></p>
+</div>
+<div class="span3">
+<p id="MFPSTAFFpStatus"></p>
+<p id="MFPSTAFFcStatus"></p>
+<p id="MFPSTAFFsStatus"></p>
+<p id="MFPSTAFFfStatus"></p>
+</div>
+</div>
+</h5>
+<h6>
+<p id="MFPSTAFFpMessage"></p>
+<p id="MFPSTAFFsMessage"></p>
+</h6>
+</div>
+<div class="span7">
+<div class="tabbable">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#MFPSTAFFsupplies", data-toggle="tab">Supplies</a></li>
+<li><a href="#MFPSTAFFinfo", data-toggle="tab">Info</a></li>
+<li><a href="#MFPSTAFFcounter", data-toggle="tab">Counter</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="MFPSTAFFsupplies">
+<div class="row">
+<div class="span3">
+<p id="MFPSTAFFpaper"></p>
+<p id="MFPSTAFFtr1"></p>
+<p id="MFPSTAFFtr2"></p>
+<p id="MFPSTAFFtr3"></p>
+<p id="MFPSTAFFtr4"></p>
+</div> 
+<div class="span4">
+<p id="MFPSTAFFtoner"></p>
+<p id="MFPSTAFFtoB"></p>
+<p id="MFPSTAFFtoC"></p>
+<p id="MFPSTAFFtoM"></p>
+<p id="MFPSTAFFtoY"></p>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="MFPSTAFFinfo">
+<p id="MFPSTAFFname"></p>
+<p id="MFPSTAFFtgioaID"></p>
+<p id="MFPSTAFFdeviceName"></p>
+<p id="MFPSTAFFhostName"></p>
+<p id="MFPSTAFFmachineID"></p>
+<p id="MFPSTAFFipAddress"></p>
+<p id="MFPSTAFFmodelName"></p>
+</div>
+<div class="tab-pane" id="MFPSTAFFcounter">
+<div class="row">
+<div class="span2">
+<p id="MFPSTAFFcountPrinter"></p>
+<p id="MFPSTAFFcountPrinterBW"></p>
+<p id="MFPSTAFFcountPrinterSC"></p>
+<p id="MFPSTAFFcountPrinterFC"></p>
+<p id="MFPSTAFFcountPrinterTC"></p>
+</div>
+<div class="span2">
+<p id="MFPSTAFFcountCopier"></p>
+<p id="MFPSTAFFcountCopierBW"></p>
+<p id="MFPSTAFFcountCopierSC"></p>
+<p id="MFPSTAFFcountCopierFC"></p>
+<p id="MFPSTAFFcountCopierTC"></p>
+</div>
+<div class="span2">
+<p id="MFPSTAFFcountScanner"></p>
+<p id="MFPSTAFFcountScannerBW"></p>
+<p id="MFPSTAFFcountScannerCOL"></p>
+<p id="MFPSTAFFcountSendTotal"></p>
+<p id="MFPSTAFFcountSendTotalBW"></p>
+<p id="MFPSTAFFcountSendTotalCOL"></p>
+</div>
+</div>
+<div class="row">
+<div class="span2">
+<p id="MFPSTAFFcountFax"></p>
+<p id="MFPSTAFFcountFaxBW"></p>
+</div>
+<div class="span2">
+<p id="MFPSTAFFcountFaxTrans"></p>
+<p id="MFPSTAFFcountFaxTransT"></p>
+</div>
+<div class="span2">
+<p id="MFPSTAFFcountOther"></p>
+<p id="MFPSTAFFcountDuplex"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</body>
+</html>
